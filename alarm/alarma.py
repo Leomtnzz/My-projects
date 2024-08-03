@@ -1,14 +1,14 @@
 #le digo una hora a la que quiero que me diga 'wake up' y que sepa la hora que es.
 
-from datetime import time
+import datetime
 
 hora_actual=str(datetime.datetime.now())
 print(hora_actual)
 
 horas=('1','2','3','4','5','6','7','8','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24')
 
-horas=str(20, 29)
-if hora_actual in horas:
+hora=('9')
+if hora_actual in hora:
     print('Wake up!')
 else:
     print('You\'re good')
