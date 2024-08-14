@@ -12,7 +12,6 @@ for i in range(0,l):
     while D-monedas[i]>=0:
         lista[i]+=1
         D=D-monedas[i]
-#         print(round(D, 2))
 # print(lista)
         
 l=len(lista)
