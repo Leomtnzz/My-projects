@@ -1,4 +1,4 @@
-milista=('Luissssssss','Leo','Nora','Maria','Ollie')
+milista=('Luis','Leo','Nora','Maria','Ollie')
 
 
 encontrada=0

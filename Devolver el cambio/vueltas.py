@@ -12,7 +12,7 @@ for i in range(0,l):
     while D-monedas[i]>=0:
         lista[i]+=1
         D=D-monedas[i]
-# print(lista)
+# print(lista) 
         
 l=len(lista)
 for i in range(0,l):
