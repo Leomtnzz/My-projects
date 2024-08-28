@@ -33,3 +33,16 @@ lista[2:8]=[]
 #Muy curioso
 txt = "The binary version of {0} is {0:b}"
 print(txt.format(7))    
+
+
+import math
+import sympy
+
+N=int(input('Dame un número entero\n'))
+M=int(input('Dame otro número entero\n'))
+
+division=N/M
+division=math.trunc(division)
+print(division)
+
+mcm=sympy.factorint

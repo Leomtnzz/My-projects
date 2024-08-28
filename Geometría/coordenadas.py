@@ -23,7 +23,7 @@ mdl=round(mdl, 3)
 C=(x+x2)/2
 D=(y+y2)/2
 CD=[C,D]
-punto_medio=[CD]
+punto_medio=CD
 
 
 print(f'Las coordenadas del punto A son {puntoA}')
