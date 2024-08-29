@@ -1,12 +1,10 @@
 # What this is for is to check if a password is valid or not. It's valid when it has at least a capital letter and a normal letter, a special character and a number, and also it has to be 10 charcters long.
 
+contraseña=input('Escribe una contraseña que contenga al menos una mayuscula, una minuscula, un número y un caracter especial y que tenga más de 10 caracteres\n')
 
-
-contraseña=input('Escribe una contraseña que contenga al menos una mayuscula, una minuscula, un número y un caracter como \'#\', \'*\' o \'@\' y que tenga más de 10 caracteres\n')
-
-min_letras=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z']
-may_letras=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-caracteres=['#','*','@']
+min_letras=['a','á','b','c','d','e','é','f','g','h','i','í','j','k','l','m','n','ñ','o','ó','p','q','r','s','t','u','ú','v','w','x','y','z','ç']
+may_letras=['A','Á','B','C','D','E','É','F','G','H','I','Í','J','K','L','M','N','Ñ','O','Ó','P','Q','R','S','T','U','Ú','V','W','X','Y','Z','Ç']
+caracteres=['#','*','@','"','$','%','&','!','/','¬','|','(',')','?','¿','¡',':',';',',']
 numeros=['0','1','2','3','4','5','6','7','8','9']
 
 l=len(contraseña)

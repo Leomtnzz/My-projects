@@ -1,25 +1,24 @@
-secuencia=int(input('Cuantos números de la secuencia Fibonacci quieres?\n'))
-lista_secuencia=[]
-
+# secuencia=int(input('Cuantos números de la secuencia Fibonacci quieres?\n'))
+secuencia=12
 def fibonacci(secuencia):
+    global sequence
     sequence = [0, 1]
     while len(sequence) < secuencia:
         sequence.append(sequence[-1] + sequence[-2])
-        print(sequence)
+    print(sequence)
     return sequence
 fibonacci(secuencia)
 
 
-# MÍO, NO FUNCIONA
 
-# while repeticion<=secuencia:
-#     for i in lista_secuencia:
-#         long=len(lista_secuencia[i])
-#         fibonacci=num
-#         num=fibonacci+(lista_secuencia[i][long-1])
-#         lista_secuencia.append(num)
-#     print(lista_secuencia)
-#     repeticion+=1
+sequence=str(sequence)
+
+# Here I wnat to add it to a text file called fibonacci.txt.
+
+f=open('fibonacci.txt', 'w')
+f.write(sequence)
+f.close()
+
 
 # NO MÍO, FUNCIONA.
 
@@ -34,3 +33,15 @@ fibonacci(secuencia)
 #         print(b, end=',')
 #         b+=a
 #     c+=1
+
+
+# MÍO, NO FUNCIONA
+
+# while repeticion<=secuencia:
+#     for i in lista_secuencia:
+#         long=len(lista_secuencia[i])
+#         fibonacci=num
+#         num=fibonacci+(lista_secuencia[i][long-1])
+#         lista_secuencia.append(num)
+#     print(lista_secuencia)
+#     repeticion+=1
