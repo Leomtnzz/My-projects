@@ -4,7 +4,7 @@ años_bisiestos=[0]
 # longitud_de_la_lista=len(años_bisiestos)/4
 suma_años_bisiestos=0
 
-if años<=2024:
+if años<=506:
     while años>=len(años_bisiestos):
         suma_años_bisiestos+=4
         años_bisiestos.append(suma_años_bisiestos)

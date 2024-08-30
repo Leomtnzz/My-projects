@@ -3,7 +3,7 @@ milista=('Luis','Leo','Nora','Maria','Ollie')
 
 encontrada=0
 l=len(milista)
-for i in range(0, l):
+for i in range(l):
         encontrada=0
         long=len(milista[i])
         vocals=('a','e','i','o','u')
