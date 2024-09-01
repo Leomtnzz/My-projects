@@ -2,7 +2,7 @@
 
 # Sorry if my instructions are not understandable, i've never done this before.
 
-def escribe_un_numero():                                        # This code makes a figure like this one for n=5:
+def escalera():                                        # This code makes a figure like this one for n=5:
     n=input('Dame un número\n')                                 #*****
     caracter='*'                                                #****
                                                                 #***
@@ -16,9 +16,9 @@ def escribe_un_numero():                                        # This code make
             print(''.join(map(str, resultado)))  # This prints the list 'resultado' as a string and in the same chain so it enables us to make this figures.
     else:
         print('Pon un número válido.')
-        return escribe_un_numero()
+        return escalera()
     
-escribe_un_numero()
+# escalera()
 
 
 
@@ -43,4 +43,37 @@ def cuadro():                                               # This one makes a f
         print('Pon un número válido.')
         return cuadro()
     
-cuadro()
+# cuadro()
+
+import math
+def tresbolillo():   #This works only with odd numbers                  # This one males a figure like this for y=5
+    y=input('Dime un número impar.\n')                                  # * * *
+    caracter='*'                                                        #  * *
+    if y.isdigit():   # This check that the input is a number           # * * *
+        y=int(y)                                                        #  * *
+        if y%2==1:    # this checks that the number is odd              # * * *
+            operacion=y/2
+            ceiling=math.ceil(operacion)
+            truncado=math.trunc(operacion)
+            lista2=[]
+            for _ in range(truncado):
+                lista=[]
+                for _ in range(ceiling):                # This loop appends to the list the lines with three '*' signs
+                    lista.append('* ')                                        
+                lista.append('\n')
+                for _ in range(truncado):               # And this one appends the lines with two '*' signs
+                    lista.append(' *')
+                print(''.join(map(str, lista)))
+            for _ in range(ceiling):                    # And this last one appends the last row of '*' signs
+                lista2.append('* ')    
+            print(''.join(map(str, lista2)))
+        
+        else:
+            print('Escribe un número inpar.')  
+            return tresbolillo()
+    
+    else:
+        print('Escribe un número válido.')
+        return tresbolillo()
+        
+tresbolillo()
