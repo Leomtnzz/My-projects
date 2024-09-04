@@ -47,13 +47,12 @@ def cuadro():                                               # This one makes a f
 
 import math
 def tresbolillo():   #This works only with odd numbers                  # This one males a figure like this for y=5
-    y=input('Dime un número impar.\n')                                  # * * *
-    caracter='*'                                                        #  * *
+    y=input('Dime un número impar.\n')                                                                                        
     if y.isdigit():   # This check that the input is a number           # * * *
         y=int(y)                                                        #  * *
         if y%2==1:    # this checks that the number is odd              # * * *
-            operacion=y/2
-            ceiling=math.ceil(operacion)
+            operacion=y/2                                               #  * * 
+            ceiling=math.ceil(operacion)                                # * * *
             truncado=math.trunc(operacion)
             lista2=[]
             for _ in range(truncado):
@@ -76,4 +75,35 @@ def tresbolillo():   #This works only with odd numbers                  # This o
         print('Escribe un número válido.')
         return tresbolillo()
         
-tresbolillo()
+# tresbolillo()
+
+
+
+def piramide():
+    z=input('Dime un número impar.\n')
+    caracter=1
+    lista=[]
+
+    if z.isdigit():   
+        z=int(z)                                                        
+        if z%2==1:
+            operacion=z/2
+            truncado=math.trunc(operacion)
+            ceiling=math.ceil(operacion)
+            for _ in range(ceiling):
+                lista.append(' ' * truncado)
+                truncado-=1
+                lista.append('*' * caracter)
+                caracter+=2
+                lista.append('\n')                
+            print(''.join(map(str, lista)))
+
+        else:
+            print('Escribe un número impar.')
+            return piramide()
+
+    else:
+        print('Escribe un número válido.')
+        return piramide()
+
+piramide()
