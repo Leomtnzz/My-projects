@@ -3,22 +3,19 @@
 # Sorry if my instructions are not understandable, i've never done this before.
 
 def escalera():                                        # This code makes a figure like this one for n=5:
-    n=input('Dame un número\n')                                 #*****
-    caracter='*'                                                #****
-                                                                #***
-    if n.isdigit():  # This cheks if the input is a integer.    #**   
-        n=int(n)                                                #*
-        for _ in range(n):
-            resultado=[]
-            operacion=n*caracter
-            n=n-1
-            resultado.append(operacion)
-            print(''.join(map(str, resultado)))  # This prints the list 'resultado' as a string and in the same chain so it enables us to make this figures.
+    n=input('Dame un número\n')                                 #*****                                               
+                                                                #****
+    if n.isdigit():  # This cheks if the input is a integer.    #*** 
+        n=int(n)                                                #**
+        while n>=0:                                             #*
+            print(n* '*')
+            n-=1
+         
     else:
         print('Pon un número válido.')
         return escalera()
     
-# escalera()
+escalera()
 
 
 
