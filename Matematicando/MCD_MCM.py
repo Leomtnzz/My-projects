@@ -8,4 +8,5 @@ division=N/M
 division=math.trunc(division)
 print(division)
 
-mcm=sympy.factorint
+mcm=sympy.factorint(N)
+print(mcm)
